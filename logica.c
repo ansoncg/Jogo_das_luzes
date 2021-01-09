@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-
 #include "logica.h"
 
 typedef struct tabuleiro {
@@ -109,11 +108,9 @@ void destroiJogo(Jogo **jogo) {
 }
 
 void pegaSolucao(Jogo *jogo, char solucao[100]) {
-    int solucaoJogo[5];
-
-    memset(solucaoJogo, 0, sizeof(int)*5); 
-    solucionaJogo(jogo->tabuleiro, solucaoJogo);
-    sprintf(solucao, "%d %d %d %d %d", solucaoJogo[0], solucaoJogo[1], 
-            solucaoJogo[2], solucaoJogo[3], solucaoJogo[4]);
+    memset(jogo->solucao, 0, sizeof(int)*5); 
+    solucionaJogo(jogo->tabuleiro, jogo->solucao);
+    sprintf(solucao, "%d %d %d %d %d", jogo->solucao[0], jogo->solucao[1], 
+            jogo->solucao[2], jogo->solucao[3], jogo->solucao[4]);
     return;
 }
