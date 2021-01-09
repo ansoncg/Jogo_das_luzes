@@ -51,7 +51,7 @@ $(EXE_V): $(OBJ)
 
 # Emscripten
 wasm:
-	emcc *.c -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='[png]' -s USE_SDL_TTF=2 --preload-file recursos -o programa.html
+	emcc *.c -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='[png]' -s USE_SDL_TTF=2 --preload-file recursos --use-preload-plugins -o programa.html
 
 clean:
 	rm -f $(OBJ) 
