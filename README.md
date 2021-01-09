@@ -4,6 +4,8 @@ Compilar e rodar em C -> make run
 
 Web Assembly precisa do Emscripten
 
+Apenas rodar (linux) -> ./jogo_das_luzes
+
 Para Web Assembly -> make wasm
 
 Referência / Como jogar / Explicação:
