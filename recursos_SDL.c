@@ -67,6 +67,7 @@ void escreveNaTela(char *texto, TTF_Font *fonte, SDL_Renderer *renderizador, int
     SDL_FreeSurface(superficieMsg);
     SDL_QueryTexture(mensagem, NULL, NULL, &largura, &altura);
     desenhaNaTela(x, y, largura, altura, mensagem, renderizador); 
+    SDL_DestroyTexture(mensagem);
     return;
 }
 
